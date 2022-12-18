@@ -1,7 +1,8 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import font from '../styles/font';
+import dokdo from '../styles/fonts/eastSeaDokdo';
+import sans from '../styles/fonts/notoSansKr';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -11,7 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="description" content="Runa & Jeongkyu, Wedding Invitation Card" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${font.variable} font-sans snap-y bg-amber-50 text-stone-700`}>
+      <main className={`${dokdo.variable} ${sans.variable} font-sans snap-y bg-amber-50 text-stone-700`}>
         <Component {...pageProps} />
       </main>
     </>
