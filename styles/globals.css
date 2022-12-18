@@ -19,12 +19,24 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
   body {
     color: white;
     background: black;
+  }
+}
+
+@layer components {
+  .section {
+    @apply h-screen w-screen flex flex-col pt-[20%] items-center snap-center text-5xl;
+  }
+
+
+  &[aria-disabled="true"] {
+    opacity: 0.6;
+    pointer-events: none;
   }
 }
