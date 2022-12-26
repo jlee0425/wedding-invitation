@@ -1,12 +1,11 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, EffectFade, Pagination } from 'swiper';
 import Image from 'next/image';
 
-import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
-import 'swiper/css/pagination';
-import { Autoplay, EffectFade, Pagination } from 'swiper';
+
 import LineBreaker from './LineBreaker';
 
 const IMAGES = [...new Array(6).keys()];

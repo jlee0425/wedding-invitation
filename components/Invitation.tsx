@@ -51,7 +51,7 @@ function Invitation() {
   useChain([greetingsRef, letterRef, closingRef], [0, 0.1, 1], 1000);
 
   return (
-    <section className="section items-start font-notoSans drop-shadow-sm max-w-2xl mx-auto p-8">
+    <section className="section items-start justify-center font-notoSans drop-shadow-sm max-w-2xl mx-auto p-8">
       <LineBreaker />
       <animated.h2 className="text-xl font-bold my-8" style={greetAnimation}>안녕하세요.</animated.h2>
       {letterAnimation.map((animation, i) => (
