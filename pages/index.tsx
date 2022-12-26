@@ -12,7 +12,7 @@ export default function Home() {
     <Swiper
       direction="vertical"
       slidesPerView={1}
-      className="w-screen h-screen"
+      className="w-full h-full"
       modules={[Pagination]}
       pagination={{
         type: 'progressbar',

@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="description" content="Runa & Jeongkyu, Wedding Invitation Card" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <main className={`${dokdo.variable} ${sans.variable} font-sans bg-amber-50 text-stone-700`}>
+      <main className={`${dokdo.variable} ${sans.variable} h-screen w-screen font-sans bg-amber-50 text-stone-700`}>
         <Component {...pageProps} />
       </main>
     </>

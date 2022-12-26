@@ -33,6 +33,6 @@ a {
 
 @layer components {
   .section {
-    @apply w-screen h-screen flex flex-col py-[20%] px-[10%] items-center text-5xl text-stone-700 relative;
+    @apply w-full h-full flex flex-col py-[20%] px-[10%] items-center text-5xl text-stone-700 relative;
   }
 }
