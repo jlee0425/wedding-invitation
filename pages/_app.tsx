@@ -10,9 +10,9 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>루나&정규 청첩장</title>
         <meta name="description" content="Runa & Jeongkyu, Wedding Invitation Card" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
-      <main className={`${dokdo.variable} ${sans.variable} font-sans snap-y bg-amber-50 text-stone-700`}>
+      <main className={`${dokdo.variable} ${sans.variable} font-sans bg-amber-50 text-stone-700`}>
         <Component {...pageProps} />
       </main>
     </>
