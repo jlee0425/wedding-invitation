@@ -1,11 +1,11 @@
-import { Pagination } from 'swiper';
+import { Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Album from '../components/Album';
 import Greetings from '../components/Greetings';
 import Invitation from '../components/Invitation';
 
 import 'swiper/css';
-import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 export default function Home() {
   return (
@@ -13,10 +13,10 @@ export default function Home() {
       direction="vertical"
       slidesPerView={1}
       className="w-full h-full"
-      modules={[Pagination]}
-      pagination={{
-        type: 'progressbar',
-        progressbarOpposite: true,
+      modules={[Scrollbar]}
+      scrollbar={{
+        draggable: true,
+        snapOnRelease: true,
       }}
     >
       <SwiperSlide>
