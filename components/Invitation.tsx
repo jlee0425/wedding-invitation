@@ -1,5 +1,5 @@
 import {
-  animated, useChain, useSpring, useSpringRef, useSprings,
+  animated, useChain, useInView, useSpring, useSpringRef, useSprings,
 } from '@react-spring/web';
 import React from 'react';
 import LineBreaker from './LineBreaker';
@@ -29,6 +29,8 @@ const INVITATION_ANIMATION = {
 };
 
 function Invitation() {
+  const [ref, inView] = useInView();
+
   const greetingsRef = useSpringRef();
   const letterRef = useSpringRef();
   const closingRef = useSpringRef();
@@ -40,18 +42,21 @@ function Invitation() {
   const [letterAnimation] = useSprings(INVITATION_LETTER.length, (i) => ({
     ref: letterRef,
     ...INVITATION_ANIMATION,
-    delay: i * 1000 + 1000,
+    delay: i * 1000,
   }));
   const closingAnimation = useSpring({
     ref: closingRef,
     ...INVITATION_ANIMATION,
-    delay: 2200,
+    delay: 3000,
   });
 
-  useChain([greetingsRef, letterRef, closingRef], [0, 0.1, 1], 1000);
+  useChain(inView ? [greetingsRef, letterRef, closingRef] : [], [0, 0.5, 1], 1000);
 
   return (
-    <section className="section items-start justify-center font-notoSans drop-shadow-sm max-w-2xl mx-auto p-8">
+    <section
+      className="section items-start justify-center font-notoSans drop-shadow-sm max-w-2xl mx-auto p-8"
+      ref={ref}
+    >
       <LineBreaker />
       <animated.h2 className="text-xl font-bold my-8" style={greetAnimation}>안녕하세요.</animated.h2>
       {letterAnimation.map((animation, i) => (
